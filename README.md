@@ -16,7 +16,7 @@ It's a Robot Framework task for checking UI-interface
 ├── tox.ini
 └── UI-test.robot
 ```
-You can set the chromedriver version and server path in a ***keywords.resource*** file:
+You can set the chromedriver version and a server path in using ***keywords.resource*** file:
 
 Just set the chromedriver version to **latest** if you are using the latest version of chrome.
 
