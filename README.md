@@ -1,3 +1,20 @@
+#UI-Suite
+It's a Robot Framework task for checking UI-interface
+
+You can set the chromedriver version and server path in a "keywords.resource" file:
+
+```bash
+
+***Settings***
+Documentation    Please select the server path:port as a first parameter and
+...              a chromedriver version as a second argument
+
+Library    ChromeLib.py    http://127.0.0.1:6969    90.0.4430.24
+
+*** Variables ***
+```
+
+
 # How to start
 Each project directory contains a tox.ini configuration file to create  an isolated environment.
 
