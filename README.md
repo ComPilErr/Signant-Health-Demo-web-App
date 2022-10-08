@@ -1,5 +1,5 @@
 # UI-Suite
-It's a Robot Framework task for checking UI-interface
+It's a Robot Framework task for checking the UI-interface
 
 ```bash
 .
