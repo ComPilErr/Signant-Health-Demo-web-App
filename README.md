@@ -1,7 +1,24 @@
 # UI-Suite
 It's a Robot Framework task for checking UI-interface
 
+```bash
+.
+├── ChromeLib.py
+├── keywords.resource     <====
+├── Locators
+│   └── PageElements.py
+├── log.html
+├── output.xml
+├── pyproject.toml
+├── report.html
+├── requirements.txt
+├── setup.py
+├── tox.ini
+└── UI-test.robot
+```
 You can set the chromedriver version and server path in a ***keywords.resource*** file:
+
+Just set the chromedriver version to **latest** if you are using the latest version of chrome.
 
 ```bash
 
