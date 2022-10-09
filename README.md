@@ -4,15 +4,10 @@ It's a Robot Framework task for checking the UI-interface
 ```bash
 .
 ├── ChromeLib.py
-├── keywords.resource     <====
+├── keywords.resource  <===
 ├── Locators
 │   └── PageElements.py
-├── log.html
-├── output.xml
-├── pyproject.toml
-├── report.html
 ├── requirements.txt
-├── setup.py
 ├── tox.ini
 └── UI-test.robot
 ```
