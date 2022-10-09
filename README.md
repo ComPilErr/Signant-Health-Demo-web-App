@@ -28,8 +28,8 @@ Library    ChromeLib.py    http://127.0.0.1:6969    90.0.4430.24
 
 
 # How to start
-Each project uses a tox management tool to create an isolated environment.
-First, you must to install the packages from the **requirements.txt** in a root directory.
+Each project uses a **tox** management tool to create an isolated environment.
+First, you must to install this package from the **requirements.txt** in a root directory.
 
 To start the tests, just go to the appropriate directory and run:
 ```bash
