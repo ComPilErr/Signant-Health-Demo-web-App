@@ -1,16 +1,6 @@
 # UI_Suite
-It's a Robot Framework task for checking the UI-interface
+It's a Robot Framework task for checking the UI-interface.
 
-```bash
-.
-├── ChromeLib.py
-├── keywords.resource  <===
-├── Locators
-│   └── PageElements.py
-├── requirements.txt
-├── tox.ini
-└── UI-test.robot
-```
 You can set the current chromedriver version and a server path using ***keywords.resource*** file:
 
 Just set the chromedriver version to **latest** if you are using the latest version of chrome.
@@ -21,11 +11,23 @@ Just set the chromedriver version to **latest** if you are using the latest vers
 Documentation    Please select the server path:port as a first parameter and
 ...              a chromedriver version as a second argument
 
-Library    ChromeLib.py    http://127.0.0.1:6969    90.0.4430.24
+Library    ChromeLib.py    http://127.0.0.1:6969    90.0.4430.24    <==
 
 *** Variables ***
 ```
 
+# API_Suite
+It's a part of a Python API task.
+Mainly it uses **requests** library for make API queries and pytest as a shell-framework
+
+You can set server path option in **conftest.py** configuration file
+```bash
+@pytest.fixture(scope="function")
+def point():
+    check = api_connector("http://127.0.0.1:6969")   <==
+    yield check
+
+```
 
 # How to start
 Each project uses a **tox** management tool to create an isolated environment.
