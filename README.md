@@ -3,8 +3,6 @@ It's a Robot Framework task for checking the UI-interface.
 
 You can set the current chromedriver version and a server path using ***keywords.resource*** file:
 
-Just set the chromedriver version to **latest** if you are using the latest version of chrome.
-
 ```bash
 
 ***Settings***
@@ -15,6 +13,7 @@ Library    ChromeLib.py    http://127.0.0.1:6969    90.0.4430.24    <==
 
 *** Variables ***
 ```
+Just set the chromedriver version to **latest** if you are using the latest version of chrome.
 
 # API_Suite
 It's a part of a Python API task.
