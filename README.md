@@ -1,4 +1,4 @@
-# UI-Suite
+# UI_Suite
 It's a Robot Framework task for checking the UI-interface
 
 ```bash
