@@ -1,6 +1,7 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from Locators.PageElements import LoginElements, RegisterElements, InformationTab, Alerts
+import functools
 
 class ChromeLib:
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
@@ -21,35 +22,37 @@ class ChromeLib:
         self.driver = webdriver.Chrome(options = options, executable_path=ChromeDriverManager(version = self.version).install())
         self.driver.implicitly_wait(10)
 
+    def printresults(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            content = func(*args, **kwargs)
+            print(content)
+            return content
+        return wrapper
+
+    @printresults
     def catch_same_user_alert(self):
-        text = self.driver.find_element(*Alerts.SAME_USER).text
-        print(text)
-        return text
+        return self.driver.find_element(*Alerts.SAME_USER).text
 
+    @printresults
     def catch_wrong_creds_alert(self):
-        text = self.driver.find_element(*Alerts.WRONG_CREDS).text
-        print(text)
-        return text
+        return self.driver.find_element(*Alerts.WRONG_CREDS).text
 
+    @printresults
     def get_username(self):
-        text = self.driver.find_element(*InformationTab.USERNAME).text
-        print(text)
-        return text
+        return self.driver.find_element(*InformationTab.USERNAME).text
 
+    @printresults
     def get_firstname(self):
-        text = self.driver.find_element(*InformationTab.FIRSTNAME).text
-        print(text)
-        return text
+        return self.driver.find_element(*InformationTab.FIRSTNAME).text
 
+    @printresults
     def get_lastname(self):
-        text = self.driver.find_element(*InformationTab.LASTNAME).text
-        print(text)
-        return text
+        return self.driver.find_element(*InformationTab.LASTNAME).text
 
+    @printresults
     def get_phone(self):
-        text = self.driver.find_element(*InformationTab.PHONE).text
-        print(text)
-        return text
+        return self.driver.find_element(*InformationTab.PHONE).text
 
     def click_on_logout(self):
         self.driver.find_element(*LoginElements.LOGOUT).click()
@@ -102,4 +105,3 @@ class ChromeLib:
         if self.driver != None:
             self.driver.quit()
         print("Everything is terminated. See you soon.")
-
