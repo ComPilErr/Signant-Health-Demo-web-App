@@ -20,7 +20,7 @@ Library    ChromeLib.py    http://127.0.0.1:6969    90.0.4430.24    <==
 It's a part of a Python API task.
 Mainly it uses a **requests** library for make an API queries and a pytest as a shell-framework.
 
-You can set the server path option in **conftest.py** configuration file
+You can set the server path option in **conftest.py** configuration file:
 ```bash
 @pytest.fixture(scope="function")
 def point():
